@@ -20,8 +20,8 @@ with open(path.join(this_directory, 'README.rst'), encoding='utf-8') as readme:
 
 setup(name="dpcontracts",
       version="0.6.0",
-      author="Rob King",
-      author_email="jking@deadpixi.com",
+      author=dpcontracts.__author__,
+      author_email=dpcontracts.__email__,
       url="https://github.com/deadpixi/contracts",
       description="A simple implementation of contracts for Python.",
       py_modules=['dpcontracts'],
