@@ -10,8 +10,13 @@ if sys.version_info[:2] < (3, 5):
     )
     sys.exit(1)
 
+from os import path
 from setuptools import setup
 import dpcontracts
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.rst'), encoding='utf-8') as readme:
+    long_description = readme.read()
 
 setup(name="dpcontracts",
       version="0.6.0",
@@ -21,7 +26,7 @@ setup(name="dpcontracts",
       description="A simple implementation of contracts for Python.",
       py_modules=['dpcontracts'],
       python_requires='>=3.5',
-      long_description=dpcontracts.__doc__,
+      long_description=long_description,
       long_description_content_type='text/x-rst',
       license="https://www.gnu.org/licenses/lgpl.txt",
       classifiers=["Development Status :: 3 - Alpha",
