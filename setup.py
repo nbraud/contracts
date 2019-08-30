@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from setuptools import setup
 import sys
 
 if sys.version_info[:2] < (3, 5):
@@ -9,7 +10,5 @@ if sys.version_info[:2] < (3, 5):
         'explicitly "pip install dpcontracts<0.6".'
     )
     sys.exit(1)
-
-from setuptools import setup
 
 setup()
